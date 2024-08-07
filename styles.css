@@ -1,0 +1,195 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #FF5722 10%, #FF9800 100%);
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #FF5722;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.round-button {
+    padding: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #FF5722;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.round-button:hover {
+    background-color: #FF4500;
+    transform: scale(1.1);
+}
+
+.shop-toggle, .invite-button, .daily-bonus, .leaderboard-toggle {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF9800;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.shop-toggle:hover, .invite-button:hover, .daily-bonus:hover, .leaderboard-toggle:hover {
+    background-color: #FB8C00;
+    transform: scale(1.1);
+}
+
+.shop-container, .leaderboard-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    display: none;
+}
+
+.shop-container h2, .leaderboard-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.shop-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.shop-item:hover {
+    background: #f1f1f1;
+}
+
+.shop-item p {
+    margin: 0 0 10px;
+}
+
+.shop-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF9800;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.shop-button:hover {
+    transform: scale(1.1);
+}
+
+.shop-button.disabled {
+    background-color: red;
+}
+
+.shop-button.enabled {
+    background-color: green;
+}
+
+#particle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 87, 34, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: particleAnimation 0.5s linear forwards;
+}
+
+@keyframes particleAnimation {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(2);
+    }
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .round-button {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    .shop-toggle, .invite-button, .daily-bonus, .leaderboard-toggle {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .shop-container, .leaderboard-container {
+        padding: 15px;
+    }
+
+    .shop-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}

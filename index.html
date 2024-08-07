@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RusKlick</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RusKlick</h1>
+        <p>Количество монет: <span id="clickCount">0</span></p>
+        <p>Прибыль в час: <span id="profitPerHour">0</span></p>
+        <p>Энергия: <span id="energy">1000</span></p>
+        <p>Уровень: <span id="level">1</span></p>
+        <p>Опыт: <span id="experience">0</span> / <span id="experienceToNextLevel">100</span></p>
+        <button id="clickButton" class="round-button">Кликни меня!</button>
+        <div id="particle-container"></div>
+    </div>
+    <button id="shopToggle" class="shop-toggle">Открыть магазин</button>
+    <button id="inviteFriends" class="invite-button">Пригласить друзей</button>
+    <button id="dailyBonus" class="daily-bonus">Получить ежедневный бонус</button>
+    <button id="leaderboardToggle" class="leaderboard-toggle">Таблица лидеров</button>
+    <div class="shop-container" id="shopContainer">
+        <h2>Магазин улучшений</h2>
+        <div class="shop-item">
+            <p>Купить 1 клик (стоимость: <span id="clickCost">50</span> монет)</p>
+            <button id="buyClick" class="shop-button">Купить</button>
+        </div>
+        <h2>Магазин энергии</h2>
+        <div class="shop-item">
+            <p>Купить 1000 энергии (стоимость: 500 монет)</p>
+            <button id="buyEnergy" class="shop-button">Купить</button>
+        </div>
+        <h2>Магазин прибыли в час</h2>
+        <div class="shop-item">
+            <p>Прибыль +10 в час (стоимость: 1000 монет)</p>
+            <button id="incomeUpgrade1" class="shop-button">Купить</button>
+        </div>
+        <div class="shop-item">
+            <p>Прибыль +100 в час (стоимость: 10000 монет)</p>
+            <button id="incomeUpgrade2" class="shop-button">Купить</button>
+        </div>
+        <div class="shop-item">
+            <p>Прибыль +1000 в час (стоимость: 100000 монет)</p>
+            <button id="incomeUpgrade3" class="shop-button">Купить</button>
+        </div>
+        <h2>Автоклики</h2>
+        <div class="shop-item">
+            <p>Купить автоклик (стоимость: 5000 монет)</p>
+            <button id="buyAutoClicker" class="shop-button">Купить</button>
+        </div>
+    </div>
+    <div class="leaderboard-container" id="leaderboardContainer">
+        <h2>Таблица лидеров</h2>
+        <ul id="leaderboard">
+            <!-- Здесь будут отображаться лидеры -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
